@@ -1,0 +1,76 @@
+---
+title: "Iris Flower Data Analysis"
+author: Pooja Kalia
+date: "2026-09-17"
+output: html_document
+---
+# Purpose
+
+This document explains the R script used to analyse the built-in iris flower dataset. The analysis summarizes flower measurements, compares average sepal length among species and creates a scatter plot.
+
+# Inputs
+
+The project explains the R script used to analyse the built-in iris flower dataset. It contains 150 observations and the following variables:
+
+- Sepal Length
+- Sepal Width
+- Petal Length
+- Petal Width
+- Species
+
+No external files or additional packages are required.
+
+# Load the dataset
+
+```{r load-data}
+data(iris)
+head(iris)
+```
+
+# Dataset information
+
+```{r dataset-information}
+str(iris)
+summary(iris)
+```
+
+# Average Sepal Length
+
+The following code calculates the average sepal length for each species.
+
+```{r average-Sepal-Length}
+aggregate(Sepal.Length ~ Species, data = iris, FUN = mean)
+```
+
+# Scatter plot
+
+```{r scatter-plot}
+plot(
+iris$Sepal.Length,
+iris$Petal.Length,
+main = "Sepal Length vs Petal Length",
+xlab = "Sepal Length",
+ylab = "Petal Length",
+col = iris$Species,
+pch = 19
+)
+legend(
+   "topleft",
+   legend = levels(iris$Species),
+   col = 1:3,
+   pch = 19
+)
+```
+   
+# Output
+   
+   The script produces:
+   
+   - A preview of the iris Dataset
+   - Dataset structure and summary statistics
+   - Average sepal length for each species
+   - A scatter plot comparing sepal length and petal length
+   
+# Conclusion
+   
+Virginica has the highest average sepal length, followed by versicolor and setosa. The scatter plot indicates a positive relationship between sepal length and petal length.
