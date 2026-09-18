@@ -53,3 +53,15 @@ BDA400- Data Science Tools and Techniques
 
 ## License
 - This project was created for educational purposes.
+
+  # AI Assistance Disclosure
+  I used ChatGPT to help draft and format this project.
+
+  ## Main prompts used
+  - Create a professional README for an R data analysis project.
+  - Help write and correct an R script using the built-in iris dataset.
+  - Create an R Markdown file documenting the script with heading and code chunks.
+  - Review the Markdown and R code for errors and formatting improvements.
+ 
+### Changes I made
+I reviewed the AI-generated content, corrected R syntax and capitalization errors, fixed the R Markdown code fences, improved the heading and working, tested the script, and Knitted the final document to confirm that the code and plot woked correctly.
